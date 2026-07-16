@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "strict": false,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "allowImportingTsExtensions": true,
+    "noEmit": true
+  },
+  "files": [],
+  "references": [
+    { "path": "./tools/tsconfig.client.json" },
+    { "path": "./tools/tsconfig.server.json" },
+    { "path": "./tools/tsconfig.shared.json" },
+    { "path": "./tools/tsconfig.vite.json" }
+  ]
+}

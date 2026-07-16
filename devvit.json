@@ -1,0 +1,30 @@
+{
+  "name": "devils-game",
+  "permissions": {
+    "reddit": true,
+    "redis": true
+  },
+  "post": {
+    "dir": "dist/client",
+    "entrypoints": {
+      "default": {
+        "inline": true,
+        "entry": "splash.html"
+      },
+      "game": {
+        "entry": "game.html"
+      }
+    }
+  },
+  "server": {
+    "dir": "dist/server",
+    "entry": "index.cjs"
+  },
+  "scripts": {
+    "build": "npm run build",
+    "dev": "vite build --watch"
+  },
+  "dev": {
+    "subreddit": "devils_game_dev"
+  }
+}

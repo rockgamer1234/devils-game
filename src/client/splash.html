@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Devil's Run - Initializing</title>
+  <link rel="stylesheet" href="./splash.css">
+</head>
+<body>
+  <div class="crt-scanlines"></div>
+  <div class="crt-vignette"></div>
+
+  <div class="splash-container">
+    <div class="logo-box">
+      <div class="logo-accent">WELCOME</div>
+      <h1 class="logo-title">DEVIL'S GAME</h1>
+      <p class="logo-subtitle">GOTHIC PRECISION PLATFORM • VER 2.0.0</p>
+    </div>
+
+    <div class="loader-box">
+      <div class="loader-track">
+        <div id="loader-bar" class="loader-bar"></div>
+      </div>
+      <div id="loading-text" class="status-text">LOADING...</div>
+    </div>
+
+    <button id="start-btn" class="start-btn" disabled>
+      <span class="btn-glow"></span>
+      <span class="btn-content">
+        <span class="btn-text">DESCENT TO THE DEVILS WORLD</span>
+        <span class="btn-arrow">▶</span>
+      </span>
+    </button>
+  </div>
+  <script type="module" src="./splash.ts"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #060103;
+  overflow: hidden;
+  font-family: 'JetBrains Mono', monospace;
+  color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.crt-scanlines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.4) 50%);
+  background-size: 100% 4px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.crt-vignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, transparent 35%, rgba(6, 1, 3, 0.98) 98%),
+              radial-gradient(circle, rgba(127, 29, 29, 0.12) 0%, transparent 80%);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.splash-container {
+  position: relative;
+  max-width: 420px;
+  width: 86%;
+  text-align: center;
+  padding: 3.5rem 2.5rem;
+  background: rgba(12, 4, 8, 0.95);
+  border: 1.5px solid rgba(127, 29, 29, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.98), 0 0 40px rgba(127, 29, 29, 0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 20;
+  animation: containerEnter 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes containerEnter {
+  0% { transform: translateY(12px) scale(0.98); opacity: 0; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.logo-box {
+  margin-bottom: 3rem;
+}
+
+.logo-accent {
+  font-size: 7.5px;
+  font-weight: 700;
+  color: #ef4444;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.logo-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2.15rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  margin: 0;
+  color: #fefefe;
+  text-shadow: 0 0 25px rgba(239, 68, 68, 0.45), 3px 3px 0px #7f1d1d;
+}
+
+.logo-subtitle {
+  font-size: 0.65rem;
+  color: #71717a;
+  margin-top: 0.75rem;
+  letter-spacing: 0.12em;
+  font-weight: bold;
+}
+
+.loader-box {
+  width: 100%;
+  margin-bottom: 3.5rem;
+}
+
+.loader-track {
+  width: 100%;
+  height: 3px;
+  background-color: rgba(63, 63, 70, 0.4);
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-bottom: 0.85rem;
+}
+
+.loader-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #7f1d1d, #b91c1c);
+  border-radius: 9999px;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+}
+
+.status-text {
+  font-size: 8px;
+  color: #71717a;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.start-btn {
+  position: relative;
+  width: 100%;
+  padding: 1rem 1.75rem;
+  background-color: transparent;
+  border: 1.5px solid rgba(127, 29, 29, 0.3);
+  color: rgba(255, 255, 255, 0.15);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  cursor: not-allowed;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.start-btn:not([disabled]) {
+  color: #fca5a5;
+  border: 1.5px solid #ef4444;
+  cursor: pointer;
+}
+
+.start-btn:hover:not([disabled]) {
+  color: #030102;
+  background-color: #ef4444;
+  box-shadow: 0 0 30px rgba(239, 68, 68, 0.55);
+  transform: scale(1.02);
+}
+
+.start-btn:active:not([disabled]) {
+  transform: scale(0.99);
+}
+
+.btn-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-arrow {
+  font-size: 9px;
+}

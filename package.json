@@ -19,7 +19,7 @@
     "@vitejs/plugin-react": "^5.0.4",
     "dotenv": "^17.2.3",
     "express": "^4.21.2",
-    "hono": "^4.12.29",
+    "hono": "^4.12.31",
     "lucide-react": "^0.546.0",
     "motion": "^12.23.24",
     "phaser": "^4.2.1",
